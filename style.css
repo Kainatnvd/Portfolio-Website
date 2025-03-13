@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #1b1b13;
+  gap: 10px;
+}
+nav h1 {
+  color: #92ad60;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #92ad60;
+}
+
+/* Hero Section */
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(to right, #3d3d2a, #000000);
+  position: relative;
+  overflow: hidden;
+  height: 20vh;
+  flex-direction: row;
+  gap: 20px;
+}
+.main-text h1 {
+  font-size: 80rem;
+  font-weight: bold;
+  color: olive;
+  z-index: 2;
+}
+.main-text h3 {
+  font-size: 2rem;
+  color: #92ad60;
+}
+.profile-img {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  right: -300px;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    right: -400px;
+  }
+  to {
+    opacity: 1;
+    right: 4%;
+  }
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+h2 {
+  color: #92ad60;
+}
+
+/* Skills */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+#skills li {
+  display: inline-block;
+  background: #92ad60;
+  color: #020202;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Contact */
+#contact a {
+  color: #92ad60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f0f0c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #main {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 20px;
+  }
+  .profile-img {
+    position: static;
+    width: 300px;
+    animation: none;
+    opacity: 1;
+  }
+  .main-text h1 {
+    font-size: 4rem;
+  }
+  .main-text h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-text h1 {
+    font-size: 3rem;
+  }
+  .main-text h3 {
+    font-size: 1.2rem;
+  }
+  .profile-img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-text h1 {
+    font-size: 2.5rem;
+  }
+  .main-text h3 {
+    font-size: 1rem;
+  }
+  .profile-img {
+    width: 200px;
+  }
+}
